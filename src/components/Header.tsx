@@ -8,7 +8,7 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <header className="w-full pb-6 px-4">
+    <header className="w-full pb-6 pt-6 px-4">
       <div className="flex w-full items-center gap-[40px_97px] justify-between">
         <div className="self-stretch flex items-center gap-4 font-normal leading-[1.2] my-auto">
           <img
