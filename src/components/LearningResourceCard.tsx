@@ -14,7 +14,7 @@ export const LearningResourceCard: React.FC<LearningResourceCardProps> = ({
   return (
     <button
       onClick={onClick}
-      className="flex flex-col min-w-[267px] w-[267px] hover:opacity-90 transition-opacity"
+      className="flex flex-col min-w-[160px] w-[160px] hover:opacity-90 transition-opacity"
     >
       <img
         src={image}
