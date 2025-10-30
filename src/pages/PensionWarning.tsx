@@ -17,8 +17,7 @@ export const PensionWarning: React.FC = () => {
     if (dontShowAgain) {
       localStorage.setItem('hidePensionWarning', 'true');
     }
-    // Navigate to transfer screen (to be implemented)
-    console.log('Continuing to transfer screen');
+    navigate('/move-funds');
   };
 
   const handleLearnMore = () => {
