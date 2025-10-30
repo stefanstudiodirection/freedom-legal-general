@@ -69,7 +69,7 @@ export const HomeDark: React.FC = () => {
                 title="Savings"
                 subtitle="High Interest Savings (Tax Free)"
                 amount={formatBalance(accounts.savings.balance)}
-                primaryAction="Move Money"
+                primaryAction="Move to Current Account"
                 primaryIcon="https://api.builder.io/api/v1/image/assets/TEMP/8a14c4e95d0138ec00a7f594bbab4d3e9eefbd12?placeholderIfAbsent=true"
                 secondaryIcon="https://api.builder.io/api/v1/image/assets/TEMP/dcd35badeac16ef7484b4ba3d04032841bc1108b?placeholderIfAbsent=true"
               />
@@ -81,7 +81,7 @@ export const HomeDark: React.FC = () => {
                 title="Pension"
                 subtitle="Your Pension and Investments"
                 amount={formatBalance(accounts.pension.balance)}
-                primaryAction="Move Money"
+                primaryAction="Move to Savings"
                 primaryIcon="https://api.builder.io/api/v1/image/assets/TEMP/51d83237c5d984d5c39a547fc4159fd1864483a6?placeholderIfAbsent=true"
                 secondaryIcon="https://api.builder.io/api/v1/image/assets/TEMP/d1845d5ef8b1c1c6c38882a9950c20690465b2da?placeholderIfAbsent=true"
               />

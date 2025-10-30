@@ -43,8 +43,16 @@ export const AccountCard: React.FC<AccountCardProps> = ({
   const handlePrimaryAction = () => {
     if (type === 'pension') {
       navigate('/pension-warning');
-    } else if (type === 'savings' || type === 'current') {
-      navigate('/select-source');
+    } else if (type === 'savings') {
+      navigate('/move-funds', { 
+        state: { 
+          sourceAccount: 'savings', 
+          destinationAccount: 'currentAccount' 
+        } 
+      });
+    } else if (type === 'current') {
+      // Current account cannot transfer out - do nothing or show message
+      return;
     } else {
       setIsExpanded(!isExpanded);
     }

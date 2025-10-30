@@ -7,8 +7,6 @@ import { AccountProvider } from "./contexts/AccountContext";
 import Index from "./pages/Index";
 import Transactions from "./pages/Transactions";
 import PensionWarning from "./pages/PensionWarning";
-import SelectSource from "./pages/SelectSource";
-import SelectDestination from "./pages/SelectDestination";
 import MoveFunds from "./pages/MoveFunds";
 import ReviewTransfer from "./pages/ReviewTransfer";
 import TransferConfirmed from "./pages/TransferConfirmed";
@@ -28,8 +26,6 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/transactions" element={<Transactions />} />
             <Route path="/pension-warning" element={<PensionWarning />} />
-            <Route path="/select-source" element={<SelectSource />} />
-            <Route path="/select-destination" element={<SelectDestination />} />
             <Route path="/move-funds" element={<MoveFunds />} />
             <Route path="/review-transfer" element={<ReviewTransfer />} />
             <Route path="/transfer-confirmed" element={<TransferConfirmed />} />
