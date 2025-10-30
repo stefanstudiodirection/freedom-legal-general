@@ -5,7 +5,7 @@ export type AccountType = 'pension' | 'savings' | 'currentAccount';
 export interface Account {
   id: AccountType;
   name: string;
-  icon: string;
+  icon: React.ReactNode;
   balance: number;
   color: string;
 }

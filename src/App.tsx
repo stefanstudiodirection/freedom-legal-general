@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AccountProvider } from "./contexts/AccountContext";
 import Index from "./pages/Index";
+import Transactions from "./pages/Transactions";
 import PensionWarning from "./pages/PensionWarning";
 import SelectSource from "./pages/SelectSource";
 import SelectDestination from "./pages/SelectDestination";
@@ -24,6 +25,7 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/transactions" element={<Transactions />} />
             <Route path="/pension-warning" element={<PensionWarning />} />
             <Route path="/select-source" element={<SelectSource />} />
             <Route path="/select-destination" element={<SelectDestination />} />

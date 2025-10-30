@@ -1,54 +1,64 @@
-import React, { useState } from "react";
+import React from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { Home, ArrowUpDown, BookOpen, User } from "lucide-react";
 
 interface NavItem {
   id: string;
   label: string;
-  icon: string;
+  path: string;
+  icon: React.ReactNode;
 }
 
 const navItems: NavItem[] = [
   {
     id: "home",
     label: "Home",
-    icon: "https://api.builder.io/api/v1/image/assets/TEMP/a6daff8d7bd3b396d271e312de45b79311c1b63a?placeholderIfAbsent=true",
+    path: "/",
+    icon: <Home className="w-6 h-6" />,
   },
   {
     id: "transactions",
     label: "Transactions",
-    icon: "https://api.builder.io/api/v1/image/assets/TEMP/f8ba64ad23f68d022a937317c7be6d0e67efc038?placeholderIfAbsent=true",
+    path: "/transactions",
+    icon: <ArrowUpDown className="w-6 h-6" />,
+  },
+  {
+    id: "learn",
+    label: "Learn",
+    path: "/learn",
+    icon: <BookOpen className="w-6 h-6" />,
   },
   {
     id: "profile",
     label: "Profile",
-    icon: "https://api.builder.io/api/v1/image/assets/TEMP/a7837c9af3a4010d10c1046ae1d5d96506f81c8a?placeholderIfAbsent=true",
-  },
-  {
-    id: "help",
-    label: "Help",
-    icon: "https://api.builder.io/api/v1/image/assets/TEMP/54b011995275f1f095d5c9fad639ec7ff2f8013f?placeholderIfAbsent=true",
+    path: "/profile",
+    icon: <User className="w-6 h-6" />,
   },
 ];
 
 export const BottomNavigation: React.FC = () => {
-  const [activeTab, setActiveTab] = useState("home");
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const handleTabClick = (tabId: string) => {
-    setActiveTab(tabId);
-  };
+  const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="items-center flex w-full text-sm text-white font-normal whitespace-nowrap text-center leading-[1.2] bg-black pt-4 pb-6 px-2 border-t-[rgba(113,104,96,0.30)] border-t border-solid fixed bottom-0 left-0 right-0 z-50">
+    <nav className="items-center flex w-full text-sm text-white font-normal whitespace-nowrap text-center leading-[1.2] bg-black pt-4 pb-6 px-2 border-t border-t-[#2C2C2E] fixed bottom-0 left-0 right-0 z-50">
       {navItems.map((item) => (
         <button
           key={item.id}
           className={`self-stretch flex flex-col items-center flex-1 shrink basis-[0%] my-auto hover:opacity-80 transition-opacity ${
-            activeTab === item.id ? "text-white" : "text-gray-400"
+            isActive(item.path) ? "text-[#A488F5]" : "text-gray-400"
           }`}
-          onClick={() => handleTabClick(item.id)}
-          aria-pressed={activeTab === item.id}
+          onClick={() => navigate(item.path)}
+          aria-pressed={isActive(item.path)}
         >
-          <img src={item.icon} className="aspect-[1] object-contain w-6" alt="" />
-          <span className={`mt-2 ${activeTab === item.id ? "text-white" : "text-gray-400"}`}>{item.label}</span>
+          <div className={isActive(item.path) ? "text-[#A488F5]" : "text-gray-400"}>
+            {item.icon}
+          </div>
+          <span className={`mt-1 text-xs ${isActive(item.path) ? "text-[#A488F5]" : "text-gray-400"}`}>
+            {item.label}
+          </span>
         </button>
       ))}
     </nav>
