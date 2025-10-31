@@ -8,7 +8,7 @@ const mockArticles = [
   {
     id: '1',
     title: 'Why £1 Today Could Mean £1.60 Less Tomorrow',
-    image: '/placeholder.svg'
+    image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=1200'
   },
   {
     id: '2',

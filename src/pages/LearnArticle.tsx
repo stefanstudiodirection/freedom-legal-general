@@ -7,7 +7,7 @@ const articles = {
   '1': {
     id: '1',
     title: 'Why £1 Today Could Mean £1.60 Less Tomorrow',
-    heroImage: 'https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1080',
+    heroImage: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=1200',
     date: '30 Oct 2025',
     readTime: '5 minute read',
     content: [
@@ -33,7 +33,7 @@ const articles = {
       },
       {
         type: 'image',
-        src: 'https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1080',
+        src: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=1200',
         alt: 'Person using mobile phone'
       },
       {
