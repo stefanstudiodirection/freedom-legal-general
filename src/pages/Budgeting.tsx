@@ -202,7 +202,10 @@ const Budgeting: React.FC = () => {
 							<div className="flex items-center gap-3">
 								<div
 									className="w-10 h-10 flex items-center justify-center rounded-[4px] bg-[#F3F3F3] dark:bg-black text-2xl"
-									style={{ color: account.color }}
+									style={{
+										color: account.color,
+										lineHeight: 1,
+									}}
 								>
 									{account.icon}
 								</div>
