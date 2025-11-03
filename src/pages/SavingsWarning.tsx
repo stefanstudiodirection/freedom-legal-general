@@ -44,9 +44,6 @@ export const SavingsWarning: React.FC = () => {
 					>
 						<ArrowLeft className="w-6 h-6" />
 					</button>
-					<h1 className="flex-1 text-center text-lg font-medium pr-12 text-foreground">
-						Review transfer
-					</h1>
 				</header>
 
 				{/* Warning Icon */}
