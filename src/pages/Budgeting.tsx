@@ -365,7 +365,7 @@ const Budgeting: React.FC = () => {
 			<div className="px-4 py-6 flex flex-col flex-1">
 				{/* Header */}
 				<div className="flex items-center justify-between mb-4">
-					<h1 className="text-2xl font-semibold text-foreground">Budgeting</h1>
+					<h1 className="text-[28px] font-semibold text-foreground">Budgeting</h1>
 					<button
 						className="w-10 h-10 rounded-full bg-white dark:bg-[#211E1E] flex items-center justify-center"
 						onClick={() => {

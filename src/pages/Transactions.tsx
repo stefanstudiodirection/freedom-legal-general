@@ -69,7 +69,7 @@ const Transactions: React.FC = () => {
 	return (
 		<div className="min-h-screen bg-[#F3F3F3] dark:bg-black text-foreground pb-24">
 			{/* Status Bar */}
-			<div className="px-6 pt-4 pb-6">
+			<div className="px-6 pt-6 pb-6">
 				{/* Header */}
 				<div className="flex justify-between items-center mb-8">
 					<h1 className="text-[28px] font-semibold">Transactions</h1>
