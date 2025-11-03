@@ -22,6 +22,7 @@ export const PinConfirmation: React.FC = () => {
   const [pin, setPin] = useState<string[]>(['', '', '', '']);
   const [focusedIndex, setFocusedIndex] = useState(0);
   const [isError, setIsError] = useState(false);
+  const transferExecutedRef = useRef(false);
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
 
   useEffect(() => {
@@ -31,10 +32,12 @@ export const PinConfirmation: React.FC = () => {
 
   useEffect(() => {
     // Check PIN when all 4 digits are entered
-    if (pin.every(digit => digit !== '')) {
+    if (pin.every(digit => digit !== '') && !transferExecutedRef.current) {
       const enteredPin = pin.join('');
       
       if (enteredPin === CORRECT_PIN) {
+        transferExecutedRef.current = true;
+        
         // Execute the transfer
         transferFunds(sourceAccount, destinationAccount, amount);
         
@@ -62,11 +65,12 @@ export const PinConfirmation: React.FC = () => {
           setPin(['', '', '', '']);
           setFocusedIndex(0);
           setIsError(false);
+          transferExecutedRef.current = false;
           inputRefs.current[0]?.focus();
         }, 1000);
       }
     }
-  }, [pin, amount, sourceAccount, destinationAccount, currency, transferFunds, navigate, toast]);
+  }, [pin]);
 
   const handleInputChange = (index: number, value: string) => {
     // Only allow digits

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback, ReactNode } from 'react';
 
 export type AccountType = 'pension' | 'savings' | 'currentAccount';
 
@@ -141,7 +141,7 @@ export const AccountProvider: React.FC<{ children: ReactNode }> = ({ children })
     }));
   };
 
-  const transferFunds = (from: AccountType, to: AccountType, amount: number) => {
+  const transferFunds = useCallback((from: AccountType, to: AccountType, amount: number) => {
     setAccounts(prev => ({
       ...prev,
       [from]: {
@@ -154,34 +154,36 @@ export const AccountProvider: React.FC<{ children: ReactNode }> = ({ children })
       }
     }));
 
-    // Create transaction records for both accounts
-    const timestamp = new Date();
-    const transactionId = `txn_${Date.now()}`;
-    
-    // Transaction for source account (withdrawal)
-    const sourceTransaction: Transaction = {
-      id: `${transactionId}_from`,
-      type: "transfer",
-      account: from,
-      amount: -amount,
-      date: timestamp,
-      recipient: `To ${accounts[to].name}`,
-      status: "completed"
-    };
+    setTransactions(prev => {
+      // Create transaction records for both accounts
+      const timestamp = new Date();
+      const transactionId = `txn_${Date.now()}`;
+      
+      // Transaction for source account (withdrawal)
+      const sourceTransaction: Transaction = {
+        id: `${transactionId}_from`,
+        type: "transfer",
+        account: from,
+        amount: -amount,
+        date: timestamp,
+        recipient: `To ${from === 'pension' ? 'Pension' : from === 'savings' ? 'Savings' : 'Current Account'}`,
+        status: "completed"
+      };
 
-    // Transaction for destination account (deposit)
-    const destTransaction: Transaction = {
-      id: `${transactionId}_to`,
-      type: "transfer",
-      account: to,
-      amount: amount,
-      date: timestamp,
-      recipient: `From ${accounts[from].name}`,
-      status: "completed"
-    };
+      // Transaction for destination account (deposit)
+      const destTransaction: Transaction = {
+        id: `${transactionId}_to`,
+        type: "transfer",
+        account: to,
+        amount: amount,
+        date: timestamp,
+        recipient: `From ${from === 'pension' ? 'Pension' : from === 'savings' ? 'Savings' : 'Current Account'}`,
+        status: "completed"
+      };
 
-    setTransactions(prev => [destTransaction, sourceTransaction, ...prev]);
-  };
+      return [destTransaction, sourceTransaction, ...prev];
+    });
+  }, []);
 
   const getAccount = (accountId: AccountType): Account => {
     return accounts[accountId];
