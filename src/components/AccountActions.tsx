@@ -17,7 +17,7 @@ export const AccountActions: React.FC<AccountActionsProps> = ({ actions }) => {
           className="flex flex-col items-center text-foreground text-xs font-medium gap-1 w-full"
         >
           <button 
-            className="bg-[#211E1E] dark:bg-[#E4B33D] text-[#E4B33D] dark:text-[#211E1E] w-12 h-12 rounded-lg flex items-center justify-center mb-1"
+            className="bg-[#211E1E] dark:bg-[#E4B33D] text-[#E4B33D] dark:text-[#211E1E] w-14 h-14 rounded-lg flex items-center justify-center mb-1"
             onClick={action.onClick}
           >
             <span className="text-lg">{action.icon}</span>

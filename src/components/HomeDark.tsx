@@ -85,7 +85,7 @@ export const HomeDark: React.FC = () => {
 
         <Header />
 
-        <main className="w-full mt-6 px-4">
+        <main className="w-full mt-4 px-4">
           <div className="mb-6">
             <CreditCard
               cardholderName="Peter Smith"
