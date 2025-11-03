@@ -10,6 +10,7 @@ import Transactions from "./pages/Transactions";
 import PensionWarning from "./pages/PensionWarning";
 import MoveFunds from "./pages/MoveFunds";
 import ReviewTransfer from "./pages/ReviewTransfer";
+import PinConfirmation from "./pages/PinConfirmation";
 import TransferConfirmed from "./pages/TransferConfirmed";
 import NotFound from "./pages/NotFound";
 import AccountDetail from "./pages/AccountDetail";
@@ -35,6 +36,7 @@ const App = () => (
 							<Route path="/pension-warning" element={<PensionWarning />} />
 							<Route path="/move-funds" element={<MoveFunds />} />
 							<Route path="/review-transfer" element={<ReviewTransfer />} />
+							<Route path="/pin-confirmation" element={<PinConfirmation />} />
 							<Route
 								path="/transfer-confirmed"
 								element={<TransferConfirmed />}

@@ -33,10 +33,8 @@ export const ReviewTransfer: React.FC = () => {
   };
 
   const handleMoveFunds = () => {
-    // Execute the transfer
-    transferFunds(sourceAccount, destinationAccount, amount);
-    
-    navigate('/transfer-confirmed', { 
+    // Navigate to PIN confirmation instead of executing transfer directly
+    navigate('/pin-confirmation', { 
       state: { 
         amount,
         sourceAccount,
