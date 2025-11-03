@@ -20,11 +20,14 @@ export const AccountCard: React.FC<AccountCardProps> = ({
 	const getBackgroundColor = () => {
 		switch (type) {
 			case "current":
-				return "bg-[#E4B33D]";
+				return "bg-[#0066FF]";
+				// return "bg-[#E4B33D]";
 			case "savings":
-				return "bg-[#A488F5]";
+				return "bg-[#641EE0]";
+				// return "bg-[#A488F5]";
 			case "pension":
-				return "bg-[rgba(33,30,30,1)]";
+				return "bg-[#0B3F2D]";
+				// return "bg-[rgba(33,30,30,1)]";
 			default:
 				return "bg-gray-500";
 		}
