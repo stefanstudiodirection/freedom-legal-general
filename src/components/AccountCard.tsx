@@ -34,7 +34,8 @@ export const AccountCard: React.FC<AccountCardProps> = ({
 	};
 
 	const getTextColor = () => {
-		return type === "pension" ? "text-white" : "text-[#211E1E]";
+		return type === "pension" ? "text-white" : "text-white";
+		// return type === "pension" ? "text-white" : "text-[#211E1E]";
 	};
 
 	const getPaddingClass = () => {
