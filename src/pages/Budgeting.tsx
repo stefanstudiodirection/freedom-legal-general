@@ -395,7 +395,7 @@ const Budgeting: React.FC = () => {
 								{/* Left side - Icon and Account info */}
 								<div className="flex items-center gap-3">
 									<div
-										className="w-12 h-12 flex items-center justify-center rounded-2xl bg-black text-3xl"
+										className="w-12 h-12 flex items-center justify-center rounded-lg bg-black text-3xl"
 										style={{
 											color: account.color,
 											lineHeight: 1,
