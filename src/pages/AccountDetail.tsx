@@ -221,8 +221,7 @@ const AccountDetail: React.FC = () => {
 				</button>
 				<div>
 					{/* <div className="mb-2 text-sm opacity-50">{config.display}</div> */}
-					<div className="text-2xl mb-1 font-semibold">{config.display}</div>
-					<div className="mb-4 text-sm opacity-80">{config.subtitle}</div>
+					<div className="text-2xl mb-4 font-semibold">{config.display}</div>
 					<div className="rounded-lg bg-white dark:bg-[#211E1E] border border-border flex items-center justify-between pt-2 pb-2 pl-2 pr-5 mb-4">
 						<div className="flex items-center gap-2">
 							{/* TODO: Icon if needed */}
