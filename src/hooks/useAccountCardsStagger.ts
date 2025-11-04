@@ -13,7 +13,7 @@ export const useAccountCardsStagger = (containerRef: RefObject<HTMLElement>) => 
         cards,
         {
           opacity: 0,
-          y: 30,
+          y: -74,
         },
         {
           opacity: 1,
