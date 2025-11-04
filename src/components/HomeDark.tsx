@@ -67,7 +67,8 @@ export const HomeDark: React.FC = () => {
   };
 
   const handleSeeAllPromotions = () => {
-    setShowAllPromotions(!showAllPromotions);
+    // setShowAllPromotions(!showAllPromotions);
+    console.log();
   };
 
   const handleNavigateToLearn = () => {
@@ -136,7 +137,7 @@ export const HomeDark: React.FC = () => {
 
         <section className="w-full pb-6 px-4 mt-6" aria-label="Promotions">
           <div className="flex w-full items-center gap-[40px_100px] leading-none justify-between">
-            <h2 className="text-foreground text-[19px] font-normal self-stretch my-auto">Rewards</h2>
+            <h2 className="text-foreground text-[18px] font-normal self-stretch my-auto">Rewards</h2>
             <button
               className="self-stretch flex items-center gap-1 text-lg text-[#A488F5] font-normal my-auto hover:text-[#9575e8] transition-colors"
               onClick={handleSeeAllPromotions}
@@ -188,7 +189,11 @@ export const HomeDark: React.FC = () => {
               aria-label="See all learning resources"
             >
               <span>See all</span>
-              <ArrowRight className="w-5 h-5" />
+              <img
+                src="https://api.builder.io/api/v1/image/assets/TEMP/c7bef006abc66b8f7fa6574d6a4853ed2994e5d2?placeholderIfAbsent=true"
+                className="aspect-[1] object-contain w-5 self-stretch shrink-0 my-auto"
+                alt=""
+              />
             </button>
           </div>
 
