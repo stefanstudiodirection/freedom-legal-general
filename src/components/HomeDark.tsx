@@ -57,7 +57,7 @@ export const HomeDark: React.FC = () => {
       },
       {
         y: "0%",
-        duration: 0.4,
+        duration: 1,
         ease: "power2.out",
       }
     );
