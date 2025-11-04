@@ -12,6 +12,7 @@ import { useNavigate } from 'react-router-dom';
 import { currentAccountActions } from "@/pages/AccountDetail";
 import { ArrowRight } from 'lucide-react';
 import { useAccountCardsStagger } from "@/hooks/useAccountCardsStagger";
+import { useGSAP } from "@gsap/react";
 
 const mockArticles = [
   {
@@ -41,8 +42,27 @@ export const HomeDark: React.FC = () => {
   const { accounts } = useAccounts();
   const navigate = useNavigate();
   const accountsSectionRef = useRef<HTMLElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
   
   useAccountCardsStagger(accountsSectionRef);
+
+  useGSAP(() => {
+    if (!headerRef.current) return;
+    
+    gsap.fromTo(
+      headerRef.current,
+      {
+        y: -20,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.4,
+        ease: "power2.out",
+      }
+    );
+  }, []);
 
   const formatBalance = (balance: number) => {
     const parts = balance.toLocaleString('en-GB', { 
@@ -88,7 +108,9 @@ export const HomeDark: React.FC = () => {
       <div className="w-full">
         {/* <StatusBar /> */}
 
+        <div ref={headerRef}>
         <Header />
+        </div>
 
         <main className="w-full mt-4 px-4">
           <section ref={accountsSectionRef} aria-label="Account overview" className="w-full">
