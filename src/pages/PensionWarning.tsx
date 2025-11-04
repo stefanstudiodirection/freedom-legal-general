@@ -132,7 +132,7 @@ export const PensionWarning: React.FC = () => {
 					{/* Continue Button */}
 					<Button
 						onClick={handleContinue}
-						className="w-full h-14 bg-[#A488F5] hover:bg-[#9575e8] text-white font-medium text-base rounded-xl"
+						className="w-full h-14 bg-[#A488F5] hover:bg-[#9575e8] text-white font-medium text-base rounded-lg"
 					>
 						I understand, continue
 					</Button>
