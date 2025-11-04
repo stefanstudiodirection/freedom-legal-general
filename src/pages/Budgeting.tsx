@@ -473,7 +473,7 @@ const Budgeting: React.FC = () => {
 								{/* Right side - Balance info */}
 								<div className="flex flex-col items-end">
 									<span className="text-base text-muted-foreground">Balance</span>
-									<span className="text-xl text-foreground">
+									<span className="text-lg text-foreground">
 										{formatCurrency(account.balance)}
 									</span>
 								</div>
