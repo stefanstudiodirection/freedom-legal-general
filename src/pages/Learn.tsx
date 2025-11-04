@@ -34,7 +34,7 @@ const Learn: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#F3F3F3] dark:bg-black text-foreground max-w-[480px] mx-auto px-4 py-6">
       <div className="flex justify-between items-center mb-8">
-					<h1 className="text-[28px] font-semibold">Learning Resources</h1>
+					<h1 className="text-[28px] font-semibold">Content hub</h1>
 					<div className="flex gap-3">
 						<button className="w-12 h-12 rounded-full bg-white dark:bg-[#1C1C1E] flex items-center justify-center">
 							<Search className="w-5 h-5" />
