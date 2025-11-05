@@ -241,7 +241,7 @@ const articles = {
 		id: "4",
 		title: "Should I Really Touch My Pension? A Guide for the Under-55s",
 		heroImage:
-			"/content-h/man-smiling.webp",
+			"/content-hub/man-smiling.webp",
 		date: "22 Oct 2025",
 		readTime: "5 minute read",
 		content: [
