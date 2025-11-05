@@ -20,7 +20,7 @@ export const useTransactionCardsStagger = (
 				{
 					opacity: 1,
 					duration: 0.3,
-					ease: "power2.out",
+					ease: "linear",
 					stagger: 0.1,
 				}
 			);
