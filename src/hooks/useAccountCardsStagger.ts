@@ -23,7 +23,7 @@ export const useAccountCardsStagger = (
 				y: 0,
 				duration: 0.6,
 				ease: "power2.out",
-				stagger: 0.15,
+				stagger: -0.15,
         delay: 0.5,
 			});
 		},
