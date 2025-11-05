@@ -25,9 +25,9 @@ export const useAccountCardsStagger = (
 			gsap.to(cards, {
 				y: 0,
 				yPercent: 0,
-				duration: 0.6,
+				duration: 0.8,
 				ease: "power2.out",
-				stagger: 0.15,
+				stagger: -0.2,
 			});
 		},
 		{ scope: containerRef }
