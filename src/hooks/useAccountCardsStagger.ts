@@ -16,7 +16,7 @@ export const useAccountCardsStagger = (
 			if (cards.length === 0) return;
 
 			gsap.set(cards, {
-				y: (index) => 20 * (index + 1), // 2. kartica: -65px, 3. kartica: -130px
+				y: (index) => 65 * (index + 1), // 2. kartica: -65px, 3. kartica: -130px
 			});
 
 			gsap.to(cards, {
