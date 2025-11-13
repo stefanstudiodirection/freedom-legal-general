@@ -3,9 +3,9 @@ export const MercerLogo = ({
 	style 
 }: { className?: string; style?: React.CSSProperties }) => (
 	<img
-  src="/path/to/lg-logo.svg"
+  src="/lg-logo.svg"
   alt="Logo"
-  width="58"
-  height="16"
+  width="37"
+  height="26"
 />
 );
