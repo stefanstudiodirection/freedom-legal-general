@@ -23,7 +23,7 @@ const mockArticles = [
 	},
 	{
 		id: "2",
-		title: "Questions to ask about dawing down",
+		title: "Questions to ask about drawing down",
     image: "/content-hub/woman-with-smile.webp",
 	},
 	{

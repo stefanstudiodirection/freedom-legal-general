@@ -77,7 +77,7 @@ const Transactions: React.FC = () => {
 	};
 
 	return (
-		<div className="min-h-screen bg-[#F3F3F3] dark:bg-black text-foreground pb-24">
+		<div className="items-stretch flex max-w-[480px] w-full flex-col overflow-hidden bg-[#F3F3F3] dark:bg-black mx-auto min-h-screen pb-20">
 			{/* Status Bar */}
 			<div className="px-4 pt-6 pb-6">
 				{/* Header */}

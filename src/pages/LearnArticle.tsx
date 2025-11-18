@@ -76,7 +76,7 @@ const articles = {
 	},
 	"2": {
 		id: "2",
-		title: "Questions to ask about dawing down",
+		title: "Questions to ask about drawing down",
 		heroImage:
 			"/content-hub/woman-with-smile.webp",
 		date: "28 Oct 2025",
