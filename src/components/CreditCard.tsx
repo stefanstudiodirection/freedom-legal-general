@@ -25,7 +25,7 @@ export const CreditCard: React.FC<CreditCardProps> = ({
 				<div className="flex items-center gap-2">
 					{/* Mercer Logo */}
 					<img
-						src="/lg-logo.svg"
+						src="/lg-logo.png"
 						alt="Logo"
 						width="47"
 						height="34"

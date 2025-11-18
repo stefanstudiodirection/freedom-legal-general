@@ -3,7 +3,7 @@ export const MercerLogo = ({
 	style 
 }: { className?: string; style?: React.CSSProperties }) => (
 	<img
-  src="/lg-logo.svg"
+  src="/lg-logo.png"
   alt="Logo"
   width="37"
   height="26"
